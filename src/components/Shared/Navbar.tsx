@@ -11,12 +11,13 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <Link
-          href="/"
-          className={`${pathname === "/" ? "text-[#8149eb] border-b-2 border-b-[#8149eb] " : ""} text-[16px] font-semibold`}
-        >
+        <Link href="/" className={`${pathname === "/" ? "text-[#8149eb] border-b-2 border-b-[#8149eb] " : ""} text-[16px] font-semibold`}>
           Home
         </Link>
+
+      </li>
+      <li>
+        <Link className={`${pathname === "/apps" ? "text-[#8149eb] border-b-2 border-b-[#8149eb] " : ""} text-[16px] font-semibold`} href={`/apps`}>Apps</Link>
       </li>
     </>
   );
