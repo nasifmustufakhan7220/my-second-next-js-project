@@ -10,7 +10,7 @@ import {
   FiMessageCircle,
   FiStar,
 } from "react-icons/fi";
-import DownloadBtn from "../DownloadBtn/DownloadBtn";
+import DownloadBtn from "../ClientBtns/DownloadBtn";
 
 
 interface AppDetailsProps {

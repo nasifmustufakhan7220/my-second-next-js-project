@@ -19,6 +19,10 @@ const Navbar = () => {
       <li>
         <Link className={`${pathname === "/apps" ? "text-[#8149eb] border-b-2 border-b-[#8149eb] " : ""} text-[16px] font-semibold`} href={`/apps`}>Apps</Link>
       </li>
+
+      <li>
+        <Link className={`${pathname === "/installations" ? "text-[#8149eb] border-b-2 border-b-[#8149eb] " : ""} text-[16px] font-semibold`} href={`/installations`}>Installations</Link>
+      </li>
     </>
   );
   return (

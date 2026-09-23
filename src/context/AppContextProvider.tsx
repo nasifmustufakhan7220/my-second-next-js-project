@@ -11,14 +11,14 @@ interface ICreateContextType{
 
 export const appContext = createContext<ICreateContextType>({
     downloads:[],
-    setDownloads: ()=>{}
+    setDownloads: ()=>{},
 });
 
 const AppContextProvider = ({children}:{children: React.ReactNode}) => {
     const [downloads, setDownloads] = useState<IAppType[]>([]);
     const obj={
         downloads,
-        setDownloads
+        setDownloads,
     }
     return (
         <appContext.Provider value={obj}>
