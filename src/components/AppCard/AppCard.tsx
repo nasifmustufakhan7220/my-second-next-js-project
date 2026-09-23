@@ -1,6 +1,6 @@
-
 import { IAppType } from "@/types/AppType";
 import Image from "next/image";
+import Link from "next/link";
 import { FiDownload, FiStar } from "react-icons/fi";
 
 interface AppCardProps {
@@ -17,7 +17,6 @@ const AppCard = ({ app }: AppCardProps) => {
           alt={app.title}
           width={200}
           height={200}
-          className="object-cover"
         />
       </figure>
 
@@ -36,10 +35,12 @@ const AppCard = ({ app }: AppCardProps) => {
         {/* Bottom Information */}
         <div className="mt-3 flex items-center justify-between gap-2">
           {/* Size */}
-          <div className="badge badge-success badge-outline gap-1 rounded-sm px-2 py-3 text-[11px]">
-            <FiDownload size={12} />
-            {app.size} MB
-          </div>
+          <Link href={`/apps/${app.id}`}>
+            <div className="badge badge-success badge-outline gap-1 rounded-sm px-2 py-3 text-[11px]">
+              <FiDownload size={12} />
+              {app.size} MB
+            </div>
+          </Link>
 
           {/* Rating */}
           <div className="badge badge-warning badge-outline gap-1 rounded-sm px-2 py-3 text-[11px]">
